@@ -65,7 +65,7 @@ class OptimisticLockException extends ORMException
     }
 
     public static function lockFailedVersionMissmatch($entity, $expectedLockVersion, $actualLockVersion) {
-	return $this->lockFailedVersionMismatch($entity, $expectedLockVersion, $actualLockVersion);
+	return self::lockFailedVersionMismatch($entity, $expectedLockVersion, $actualLockVersion);
     }
  
     /**
